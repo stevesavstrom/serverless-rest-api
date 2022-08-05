@@ -1,0 +1,19 @@
+{
+  "name": "serverless-rest-api",
+  "version": "1.0.0",
+  "description": "Example of a serverless REST API built with AWS. This API provides create, read, update, and delete (CRUD) functionality.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stevesavstrom/serverless-rest-api.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/stevesavstrom/serverless-rest-api/issues"
+  },
+  "homepage": "https://github.com/stevesavstrom/serverless-rest-api#readme"
+}
