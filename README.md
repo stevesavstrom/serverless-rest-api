@@ -9,7 +9,7 @@ Example of a serverless REST API built with AWS. This API provides create, read,
 
 ## Prerequisites
 - [AWS account](https://aws.amazon.com/premiumsupport/knowledge-center/create-and-activate-aws-account/) for provisioning cloud services.
-- Basic [Postman](https://learning.postman.com/docs/getting-started/introduction/) skills for testing the API.
+- [Postman](https://learning.postman.com/docs/getting-started/introduction/) for testing the API.
 
 ## Steps
 - Create DynamoDB table
