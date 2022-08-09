@@ -8,7 +8,6 @@ const healthPath = '/health';
 const contactPath = '/contact';
 const contactsPath = '/contacts';
 
-// Testing GitHub Action
 exports.handler = async function(event) {
   console.log('Request event: ', event);
   let response;
