@@ -1,6 +1,6 @@
 # AWS Serverless REST API
 
-Example of a serverless REST API built with AWS. This API provides create, read, update, and delete (CRUD) functionality. Test GitHub Action...
+Example of a serverless REST API built with AWS. This API provides create, read, update, and delete (CRUD) functionality.
 
 ## Overview of AWS Services
 - [Lambda](https://aws.amazon.com/lambda/)
