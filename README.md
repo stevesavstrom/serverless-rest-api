@@ -1,5 +1,4 @@
 # AWS Serverless REST API
-
 Example of a serverless REST API built with Amazon Web Services. This API provides create, read, update, and delete (CRUD) functionality.
 
 - [Lambda](https://aws.amazon.com/lambda/)
@@ -34,20 +33,20 @@ Text
 ## GET /health
 Request Body:
 ```json
-None
+"None"
 ```
 Response:
 ```json
-200 OK
+"200 OK"
 ```
 ## GET /contacts
 Request Body:
 ```json
-None
+"None"
 ```
 Response:
 ```json
-200 OK
+"200 OK"
 ```
 
 ## POST /contact
@@ -81,7 +80,7 @@ Response:
 ## GET /contact?contactId=10004
 Request Body:
 ```json
-None
+"None"
 ```
 Response:
 ```json
