@@ -70,7 +70,7 @@ First create a new DynamoDB table. This will be the data source for the API.
 
 # Test API Endpoints in Postman
 
-## GET /health
+## GET `/health`
 Test the health of the API by sending a GET request to the `/health` endpoint which should return a `200 OK` response.
 
 Request Body:
@@ -81,7 +81,7 @@ Response:
 ```json
 "200 OK"
 ```
-## GET /contacts
+## GET `/contacts`
 Sending a GET request to the `/contacts` endpoint will return a list of all contacts in the database.
 Request Body:
 ```json
@@ -92,7 +92,7 @@ Response:
 "200 OK"
 ```
 
-## POST /contact
+## POST `/contact`
 Add contacts to the database by sending a POST request to the `/contact` endpoint.
 
 Request Body:
@@ -122,7 +122,7 @@ Response:
 }
 ```
 
-## GET /contact?contactId=10004
+## GET `/contact?contactId=10004`
 Retrieve a single contact using the `/contact` endpoint with `contactId` as q query parameter.
 
 Request Body:
@@ -161,7 +161,7 @@ Response:
 }
 ```
 
-## PATCH /contact
+## PATCH `/contact`
 Request Body:
 ```json
 {
@@ -183,7 +183,7 @@ Response:
 }
 ```
 
-## DELETE /contact
+## DELETE `/contact`
 Request Body:
 ```json
 {
