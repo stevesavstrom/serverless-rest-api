@@ -33,11 +33,11 @@ Text
 
 ## GET /health
 Request Body:
-```
+```json
 None
 ```
 Response:
-```
+```json
 200 OK
 ```
 ## GET /contacts
@@ -86,27 +86,6 @@ None
 Response:
 ```json
 {
-    "occupation": "Dentist",
-    "contactId": "10004",
-    "lastName": "Smith",
-    "email": "louis.smith@gmail.com",
-    "phone": "505-426-8570",
-    "firstName": "Louis"
-}
-```
-
-## PATCH /contact
-Request Body:
-```json
-{
-    "contactId": "10002",
-    "updateKey": "phone",
-    "updateValue": "612-999-9903"
-}
-```
-Response:
-```json
-{
 	"contacts": [
 		{
 			"occupation": "Designer",
@@ -133,6 +112,28 @@ Response:
 			"firstName": "Stephen"
 		}
 	]
+}
+```
+
+## PATCH /contact
+Request Body:
+```json
+{
+    "contactId": "10002",
+    "updateKey": "phone",
+    "updateValue": "612-999-9903"
+}
+```
+Response:
+```json
+{
+    "Operation": "UPDATE",
+    "Message": "SUCCESS",
+    "UpdatedAttributes": {
+        "Attributes": {
+            "phone": "612-999-0000"
+        }
+    }
 }
 ```
 
