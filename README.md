@@ -19,18 +19,60 @@ First create a new DynamoDB table. This will be the data source for the API.
 6. Leave `Table settings` as `Default settings`.
 7. Click `Create table`.
 
-# Create an IAM role
-Next, create an IAM role 
-
-# Create Lambda function
-Text
+# Create Lambda function and attach IAM role and policies
+1. Search for `Lambda` in AWS Console.
+2. Click `Create function`
+3. Enter a function name such as `serverlessRestApi`.
+4. Select `Node.js` as a runtime.
+5. Under `Permissions` select `Change default execution role` and then `Create a new role from AWS policy templates` with a name such as `serverlessApiRole`.
+6. Click `Create function`.
+7. Click `Permissions` and then click on the role name that was just created.
+8. Click `Attach policies` and search for `CloudWatchLogsFullAccess`, select the policy, then click `Attach policy`.
+8. Click `Attach policies` and search for `DynamoDBFullAccess`, select the policy, then click `Attach policy`.
 
 # Create API Gateway resource and HTTP methods
-Text
+1. Search for `API Gateway` in AWS Console.
+2. Click `Create API`.
+3. Go to `REST API` and click `Build`.
+4. Select `REST` and `New API`.
+5. Enter a name such as `contactListRestAPI` and leave endpoint type as `Regional`
+
+## Creating a `/health` endpoint:
+
+6. Click `Actions` and then `Create resource`.
+7. Enter resource name `health` and select `Enable API Gateway CORS`.
+8. Select the `Health` resource and then click `Actions` and `Create method`.
+9. Select `GET` method with `Integration type` as `Lambda`
+10. Select `Use Lambda Proxy integration`.
+11. Select the deployment region where the Lambda function will be deployed as `us-east-1`.
+12. Search for the Lambda function by name such as `serverlessRestApi`.
+
+## Creating a `/contacts` endpoint:
+
+6. Click `Actions` and then `Create resource`.
+7. Enter resource name `contacts` and select `Enable API Gateway CORS`.
+8. Select the `Contacts` resource and then click `Actions` and `Create method`.
+9. Select `GET` method with `Integration type` as `Lambda`
+10. Select `Use Lambda Proxy integration`.
+11. Select the deployment region where the Lambda function will be deployed as `us-east-1`.
+12. Search for the Lambda function by name such as `serverlessRestApi`.
+
+## Creating a `/contact` endpoint:
+
+13.
+14.
+15.
+16.
+17.
+18.
+19.
+20.
 
 # Test API Endpoints in Postman
 
 ## GET /health
+Test the health of the API by sending a GET request to the `/health` endpoint which should return a `200 OK` response.
+
 Request Body:
 ```json
 "None"
@@ -40,6 +82,7 @@ Response:
 "200 OK"
 ```
 ## GET /contacts
+Sending a GET request to the `/contacts` endpoint will return a list of all contacts in the database.
 Request Body:
 ```json
 "None"
@@ -50,6 +93,8 @@ Response:
 ```
 
 ## POST /contact
+Add contacts to the database by sending a POST request to the `/contact` endpoint.
+
 Request Body:
 ```json
 {
@@ -78,6 +123,8 @@ Response:
 ```
 
 ## GET /contact?contactId=10004
+Retrieve a single contact using the `/contact` endpoint with `contactId` as q query parameter.
+
 Request Body:
 ```json
 "None"
