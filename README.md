@@ -11,62 +11,58 @@ Example of a serverless REST API built with Amazon Web Services. This API provid
 
 # Create DynamoDB table
 First create a new DynamoDB table. This will be the data source for the API.
-1. Login to the AWS console using an IAM user.
-2. Search for `DynamoDB`.
-3. Click `Create table`.
-4. Enter a table name such as `contact-list`.
-5. Enter a partition key such as `contactId` with a data type of `String` (leave sort key blank for this example.)
-6. Leave `Table settings` as `Default settings`.
-7. Click `Create table`.
+- Login to the AWS console using an IAM user.
+- Search for `DynamoDB`.
+- Click `Create table`.
+- Enter a table name such as `contact-list`.
+- Enter a partition key such as `contactId` with a data type of `String` (leave sort key blank for this example.)
+- Leave `Table settings` as `Default settings`.
+- Click `Create table`.
 
 # Create Lambda function and attach IAM role and policies
-1. Search for `Lambda` in AWS Console.
-2. Click `Create function`
-3. Enter a function name such as `serverlessRestApi`.
-4. Select `Node.js` as a runtime.
-5. Under `Permissions` select `Change default execution role` and then `Create a new role from AWS policy templates` with a name such as `serverlessApiRole`.
-6. Click `Create function`.
-7. Click `Permissions` and then click on the role name that was just created.
-8. Click `Attach policies` and search for `CloudWatchLogsFullAccess`, select the policy, then click `Attach policy`.
-8. Click `Attach policies` and search for `DynamoDBFullAccess`, select the policy, then click `Attach policy`.
+- Search for `Lambda` in AWS Console.
+- Click `Create function`
+- Enter a function name such as `serverlessRestApi`.
+- Select `Node.js` as a runtime.
+- Under `Permissions` select `Change default execution role` and then `Create a new role from AWS policy templates` with a name such as `serverlessApiRole`.
+- Click `Create function`.
+- Click `Permissions` and then click on the role name that was just created.
+- Click `Attach policies` and search for `CloudWatchLogsFullAccess`, select the policy, then click `Attach policy`.
+- Click `Attach policies` and search for `DynamoDBFullAccess`, select the policy, then click `Attach policy`.
 
 # Create API Gateway resource and HTTP methods
-1. Search for `API Gateway` in AWS Console.
-2. Click `Create API`.
-3. Go to `REST API` and click `Build`.
-4. Select `REST` and `New API`.
-5. Enter a name such as `contactListRestAPI` and leave endpoint type as `Regional`
+- Search for `API Gateway` in AWS Console.
+- Click `Create API`.
+- Go to `REST API` and click `Build`.
+- Select `REST` and `New API`.
+- Enter a name such as `contactListRestAPI` and leave endpoint type as `Regional`
 
 ## Creating a `/health` endpoint:
 
-6. Click `Actions` and then `Create resource`.
-7. Enter resource name `health` and select `Enable API Gateway CORS`.
-8. Select the `Health` resource and then click `Actions` and `Create method`.
-9. Select `GET` method with `Integration type` as `Lambda`
-10. Select `Use Lambda Proxy integration`.
-11. Select the deployment region where the Lambda function will be deployed as `us-east-1`.
-12. Search for the Lambda function by name such as `serverlessRestApi`.
+- Click `Actions` and then `Create resource`.
+- Enter resource name `health` and select `Enable API Gateway CORS`.
+- Select the `Health` resource and then click `Actions` and `Create method`.
+- Select `GET` method with `Integration type` as `Lambda`
+- Select `Use Lambda Proxy integration`.
+- Select the deployment region where the Lambda function will be deployed as `us-east-1`.
+- Search for the Lambda function by name such as `serverlessRestApi`.
 
 ## Creating a `/contacts` endpoint:
 
-6. Click `Actions` and then `Create resource`.
-7. Enter resource name `contacts` and select `Enable API Gateway CORS`.
-8. Select the `Contacts` resource and then click `Actions` and `Create method`.
-9. Select `GET` method with `Integration type` as `Lambda`
-10. Select `Use Lambda Proxy integration`.
-11. Select the deployment region where the Lambda function will be deployed as `us-east-1`.
-12. Search for the Lambda function by name such as `serverlessRestApi`.
+- Click `Actions` and then `Create resource`.
+- Enter resource name `contacts` and select `Enable API Gateway CORS`.
+- Select the `Contacts` resource and then click `Actions` and `Create method`.
+- Select `GET` method with `Integration type` as `Lambda`
+- Select `Use Lambda Proxy integration`.
+- Select the deployment region where the Lambda function will be deployed as `us-east-1`.
+- Search for the Lambda function by name such as `serverlessRestApi`.
 
 ## Creating a `/contact` endpoint:
 
-13.
-14.
-15.
-16.
-17.
-18.
-19.
-20.
+- PUT
+- GET
+- PATCH
+- DELETE
 
 # Test API Endpoints in Postman
 
