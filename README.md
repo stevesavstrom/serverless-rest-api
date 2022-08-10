@@ -85,7 +85,34 @@ Request Body:
 ```
 Response:
 ```json
-"200 OK"
+{
+	"contacts": [
+		{
+			"occupation": "Designer",
+			"contactId": "10003",
+			"lastName": "Smith",
+			"email": "louis.smith@gmail.com",
+			"phone": "505-426-8570",
+			"firstName": "Louis"
+		},
+		{
+			"occupation": "Designer",
+			"contactId": "10002",
+			"lastName": "Henson",
+			"email": "stacy.henson@hotmail.com",
+			"phone": "443-455-0735",
+			"firstName": "Stacy"
+		},
+		{
+			"occupation": "Software Engineer",
+			"contactId": "10001",
+			"lastName": "Neely",
+			"email": "stephen.neely@yahoo.com",
+			"phone": "803-740-4478",
+			"firstName": "Stephen"
+		}
+	]
+}
 ```
 
 ## POST `/contact`
@@ -118,7 +145,7 @@ Response:
 }
 ```
 
-## GET `/contact?contactId=10004`
+## GET `/contact?contactId=10003`
 Retrieve a single contact using the `/contact` endpoint with `contactId` as q query parameter.
 
 Request Body:
@@ -128,32 +155,12 @@ Request Body:
 Response:
 ```json
 {
-	"contacts": [
-		{
-			"occupation": "Designer",
-			"contactId": "10003",
-			"lastName": "Smith",
-			"email": "louis.smith@gmail.com",
-			"phone": "505-426-8570",
-			"firstName": "Louis"
-		},
-		{
-			"occupation": "Designer",
-			"contactId": "10002",
-			"lastName": "Henson",
-			"email": "stacy.henson@hotmail.com",
-			"phone": "443-455-0735",
-			"firstName": "Stacy"
-		},
-		{
-			"occupation": "Software Engineer",
-			"contactId": "10001",
-			"lastName": "Neely",
-			"email": "stephen.neely@yahoo.com",
-			"phone": "803-740-4478",
-			"firstName": "Stephen"
-		}
-	]
+	"occupation": "Designer",
+	"contactId": "10003",
+	"lastName": "Smith",
+	"email": "louis.smith@gmail.com",
+	"phone": "505-426-8570",
+	"firstName": "Louis"
 }
 ```
 
